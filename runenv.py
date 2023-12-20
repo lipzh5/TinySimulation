@@ -33,6 +33,14 @@ def show_init_setting():
 	plt.imshow(img)
 	plt.show()
 
+def show_img_top(image_size=(240, 240)):
+	obs = env.reset(config)
+	img = env.get_camera_image_top(image_size=image_size)
+	im = Image.fromarray(img)
+	im.save('outputs/top_env.png')
+	plt.imshow(img)
+	plt.show()
+
 """
 You are free to modify the pick and place object name as long as they are in the above config dict
 """
@@ -59,5 +67,6 @@ def output_cached_video():
 
 
 if __name__ == "__main__":
+	show_img_top()
 	# show_init_setting()
-	execute_action()
+	# execute_action()

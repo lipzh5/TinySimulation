@@ -144,6 +144,7 @@ class PickPlaceEnv:
 		set_alpha and self.set_alpha_transparency(0)
 		color, _, _, _, _ = self.render_image_top(image_size, intrinsics, position, orientation, zrange)
 		set_alpha and self.set_alpha_transparency(1)
+		return color
 
 	def set_alpha_transparency(self, alpha):
 		for _id in range(20):
